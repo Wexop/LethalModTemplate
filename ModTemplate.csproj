@@ -45,10 +45,6 @@
       </Reference>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Scripts\" />
-    </ItemGroup>
-
     <!-- Run Evaisa's Netcode patcher after building (https://github.com/EvaisaDev/UnityNetcodePatcher) -->
     <Target Name="NetcodePatch" AfterTargets="PostBuildEvent">
         <Exec Command="netcode-patch &quot;$(TargetPath)&quot; @(ReferencePathWithRefAssemblies->'&quot;%(Identity)&quot;', ' ')" />
